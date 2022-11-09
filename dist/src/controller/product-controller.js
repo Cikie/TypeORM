@@ -22,6 +22,9 @@ class ProductController {
         this.editProduct = async (req, res) => {
             await this.productService.productEdit(req, res);
         };
+        this.deleteProduct = async (req, res) => {
+            await this.productService.productDelete(req, res);
+        };
         this.productService = new product_service_1.ProductService();
     }
 }

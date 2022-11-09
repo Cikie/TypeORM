@@ -30,5 +30,9 @@ export class ProductController {
     editProduct = async (req:Request, res:Response) => {
         await this.productService.productEdit(req,res);
     }
+
+    deleteProduct = async (req:Request, res:Response) => {
+        await this.productService.productDelete(req,res);
+    }
 }
 export default new ProductController();

@@ -12,7 +12,6 @@ class ProductService {
             let file = req.files;
             if (file != null) {
                 let product = req.body;
-                console.log(product);
                 let image = file.image;
                 await image.mv('./public/storage/' + image.name);
                 product.image = "storage/" + image.name;
@@ -25,13 +24,17 @@ class ProductService {
             let idPro = req.params.id;
             if (files != null) {
                 let products = req.body;
-                console.log(products);
                 let image = files.image;
                 await image.mv('./public/storage/' + image.name);
                 products.image = "storage/" + image.name;
                 await this.productRepo.update({ id: idPro }, products);
                 res.redirect(301, '/products');
             }
+        };
+        this.productDelete = async (req, res) => {
+            let idPro = req.params.id;
+            await this.productRepo.delete({ id: idPro });
+            res.redirect(301, '/products');
         };
         data_source_1.AppDataSource.initialize().then(connection => {
             console.log('Connect DB Success !!');

@@ -8,3 +8,5 @@ routerProduct.post('/create',productController.createProduct);
 
 routerProduct.get('/edit/:id',productController.showFormEdit);
 routerProduct.post('/edit/:id',productController.editProduct);
+
+routerProduct.post('/delete/:id',productController.deleteProduct)

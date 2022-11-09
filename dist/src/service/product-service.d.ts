@@ -5,4 +5,5 @@ export declare class ProductService {
     findAll: (req: Request, res: Response) => Promise<any>;
     saveProduct: (req: Request, res: Response) => Promise<void>;
     productEdit: (req: Request, res: Response) => Promise<void>;
+    productDelete: (req: Request, res: Response) => Promise<void>;
 }
