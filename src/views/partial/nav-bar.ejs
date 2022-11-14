@@ -13,13 +13,19 @@
                 <a href="#servicePage" class="nav-item nav-link">Service</a>
                 <a href="#menu" class="nav-item nav-link">Menu</a>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Log In</a>
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Category</a>
                     <div class="dropdown-menu text-capitalize">
-                        <a href="reservation.html" class="dropdown-item">Sign In</a>
-                        <a href="testimonial.html" class="dropdown-item">Sign Up</a>
+                        <% for(let i = 0 ; i < listCategory.length;i++){ %>
+                            <a href="/category/<%= listCategory[i].idC %>"
+                               class="dropdown-item"><%= listCategory[i].type %></a>
+                        <% } %>
                     </div>
                 </div>
             </div>
+        </div>
+        <div>
+            <a href="/login">Login</a>
+            <a href="/register">Register</a>
         </div>
     </nav>
 </div>

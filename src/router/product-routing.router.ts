@@ -10,3 +10,6 @@ routerProduct.get('/edit/:id',productController.showFormEdit);
 routerProduct.post('/edit/:id',productController.editProduct);
 
 routerProduct.post('/delete/:id',productController.deleteProduct)
+
+routerProduct.get('/category/:idC',productController.getProductByCategory);
+routerProduct.post('/category/:idC',productController.showCategoryOnProduct);

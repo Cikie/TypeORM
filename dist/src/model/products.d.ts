@@ -5,4 +5,5 @@ export declare class Products {
     description: string;
     quantity: number;
     image: string;
+    idCategory: number;
 }

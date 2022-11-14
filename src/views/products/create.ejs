@@ -102,6 +102,14 @@
                                        name="image"
                                        required="required"/>
                             </div>
+
+                            <div class="form-group">
+                                <select name="idCategory" id="category">
+                                    <% for(let i = 0 ; i < listCategory.length;i++){ %>
+                                    <option value="<%=listCategory[i].idC%>"><%=listCategory[i].type%></option>
+                                    <%}%>
+                                </select>
+                            </div>
                             <div>
                                 <button class="btn btn-primary btn-block font-weight-bold py-3" type="submit">Add Now
                                 </button>

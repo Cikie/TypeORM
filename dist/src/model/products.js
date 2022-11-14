@@ -37,6 +37,10 @@ __decorate([
     (0, typeorm_1.Column)({ type: "varchar" }),
     __metadata("design:type", String)
 ], Products.prototype, "image", void 0);
+__decorate([
+    (0, typeorm_1.Column)({ type: "int" }),
+    __metadata("design:type", Number)
+], Products.prototype, "idCategory", void 0);
 Products = __decorate([
     (0, typeorm_1.Entity)({ name: 'products' })
 ], Products);

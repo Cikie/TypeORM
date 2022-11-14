@@ -1,6 +1,7 @@
 import express from 'express';
 import {router} from "./src/router/router";
 import fileUpload from 'express-fileupload'
+import CategoryService from "./src/service/category-service";
 
 
 const app = express();
@@ -8,16 +9,15 @@ app.set("view engine", "ejs");
 
 app.set("views", "./src/views");
 app.use(fileUpload({
-    createParentPath:true
+    createParentPath: true
 }));
 app.use(express.static('public'))
 app.use(express.json());
-app.use('',router);
-
+app.use('', router);
 
 const PORT = 3000;
 
-app.listen(PORT,()=>{
+app.listen(PORT, () => {
 
     console.log('Sever is running')
 })
